@@ -4,8 +4,8 @@ metadata:
   namespace: default
   name: pod-access
 rules:
-- apiGroups: ["", "apps"]
-  resources: ["deployments", "replicasets", "pods"]
+- apiGroups: ["", "apps", "rbac.authorization.k8s.io"]
+  resources: ["deployments", "replicasets", "pods", "namespaces", "nodes"]
   verbs: ["get", "list", "watch", "create", "update", "patch", "delete"] # You can also use ["*"]
 - nonResourceURLs: ["*"]
   verbs: ["get", "watch", "list"]
